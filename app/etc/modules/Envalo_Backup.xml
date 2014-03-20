@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Envalo_Backup>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Backup/>
+            </depends>
+        </Envalo_Backup>
+    </modules>
+</config>

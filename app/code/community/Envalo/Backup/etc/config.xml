@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Envalo_Backup>
+            <version>0.0.1</version>
+        </Envalo_Backup>
+    </modules>
+    <global>
+        <models>
+            <envalo_backup>
+                <class>Envalo_Backup_Model</class>
+                <resourceModel>envalo_backup_resource</resourceModel>
+            </envalo_backup>
+            <envalo_backup_resource>
+                <class>Envalo_Backup_Model_Resource</class>
+            </envalo_backup_resource>
+            <backup_resource>
+                <rewrite>
+                    <helper_mysql4>Envalo_Backup_Model_Resource_Backup_Helper_Mysql4</helper_mysql4>
+                </rewrite>
+            </backup_resource>
+        </models>
+        <helpers>
+            <envalo_backup>
+                <class>Envalo_Backup_Helper</class>
+            </envalo_backup>
+        </helpers>
+    </global>
+</config>
