@@ -47,7 +47,9 @@ class Envalo_Backup_Model_Resource_Backup_Helper_Mysql4 extends Mage_Backup_Mode
                     'CREATE TRIGGER ',
                     $row[$createIndex]);
                 $results[] = sprintf('DROP TRIGGER IF EXISTS %s;', $quotedTriggerName);
-                $results[] = $filteredCreateSyntax . ';';
+                $results[] = "DELIMITER ;;";
+                $results[] = $filteredCreateSyntax . ';;';
+                $results[] = "DELIMITER ;";
             }
         }
 
